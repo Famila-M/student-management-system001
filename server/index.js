@@ -10,7 +10,7 @@ const app = express();
 app.use(bodyParser.json({limit: "20mb", extended: true}));
 app.use(bodyParser.urlencoded({limit: "20mb", extended: true}));
 
-app.use(cors());
+app.use(cors({origin:"https://student-management-system001.netlify.app/"}));
 app.use('/students', studentRoutes);
 
 const CONNECTION_URL = 'mongodb+srv://skillsbuildt:12345@cluster0.spedy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
